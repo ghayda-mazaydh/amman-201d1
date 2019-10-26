@@ -21,6 +21,7 @@ function renderCart() {
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {}
 
+
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
 
@@ -34,6 +35,12 @@ function showCart() {
 }
 
 function removeItemFromCart(event) {
+  var removeItemFromCart= document.getElementsByClassName('copy');
+  for (var i = 0; i< removeItemFromCart.length; i++){
+    var removeButton = removeItemFromCart[i]
+    removeButton.addEventListener('click', removeItem)
+  }
+
 
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   // TODO: Save the cart back to local storage
